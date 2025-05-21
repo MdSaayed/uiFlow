@@ -493,8 +493,9 @@ body.menu-open {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 5rem;
 }
 
 .projects__grid {
@@ -613,8 +614,6 @@ body.menu-open {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
   align-items: flex-start;
   margin-top: 5rem;
 }
@@ -767,9 +766,6 @@ body.menu-open {
 }
 
 /* Testimonials */
-.testimonials {
-  padding: 4rem 2rem;
-}
 
 .testimonials__header {
   display: flex;
@@ -797,16 +793,26 @@ body.menu-open {
   position: relative;
 }
 
+
 .testimonial-card__image-wrapper {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
+  width: 100%;
+  height: auto;
 }
 
 .testimonial-card__image {
   width: 100%;
   height: auto;
   display: block;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.testimonial-card__image-wrapper:hover .testimonial-card__image{
+  transform: rotate(6deg);
+  scale: 1.2;
 }
 
 .testimonial-card__play {
@@ -835,7 +841,61 @@ body.menu-open {
   text-align: left;
   color: var(--text-color);
 }
- 
+
+/* ===================marquee */
+.marquee{
+  overflow: hidden;
+}
+.marquee__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.marquee__wrapper {
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee__item {
+  font-size: 7rem;
+  font-weight: 500;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+.marquee__wrapper--rtl .marquee__item {
+  animation: marquee-content-right-to-left 15s linear infinite;
+}
+
+.marquee__wrapper--ltr .marquee__item {
+  animation: marquee-content-left-to-right 15s linear infinite;
+}
+
+.marquee__wrapper:hover .marquee__item {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-content-right-to-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-content-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
 
 /* Blog */
 .blog__btn-wrapper{
@@ -1109,6 +1169,9 @@ body.menu-open {
       margin-top: 0;
     }
 
+    .marquee__item {
+      font-size: 4.5rem;
+    }
 
 
     .footer__top{
@@ -1160,6 +1223,10 @@ body.menu-open {
     /* project */
     .projects__intro {
       padding:0 !important;
+    }
+
+    .marquee__item {
+      font-size: 3.5rem;
     }
 
     /* blog */
