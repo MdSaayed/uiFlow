@@ -1,8 +1,28 @@
+/*------------------------------------------------------------------
+Template Name: UiFlow - Saas Html Template
+Template URL: [demo url]
+Description: This is a landing page for E-book made with bootstrap 5
+Author: UiBazar
+Author URL: https://uibazar.com
+Version: 1.0
+-------------------------------------------------------------------
+
+CSS INDEX
+===================
+
+1. Basic Styles
+2. Header Area
+3. Hero Area
+
+------------------------------------------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/*  font-family: "Inter", sans-serif; */
 
-/* basic styling */
+/* =============================
+* Basic Styles
+============================= */
+
 :root{
     --primary:#D1FC71;
     --secondary:#010202;
