@@ -1,0 +1,154 @@
+/*------------------------------------------------------------------
+Template Name: UiFlow - Saas Html Template
+Template URL: [demo url]
+Description: This is a landing page for E-book made with bootstrap 5
+Author: UiBazar
+Author URL: https://uibazar.com
+Version: 1.0
+-------------------------------------------------------------------
+
+CSS INDEX
+===================
+
+1. Marque Animation
+
+------------------------------------------------------------------*/
+
+
+/* =============================
+* 1. Marque Animation
+============================= */
+@keyframes marquee-content-right-to-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-content-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.blog-detail__container {
+  max-width: 1160px !important;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.blog-detail__tags {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.blog-detail__tag {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 8px 16px;
+  border-radius: 32px;
+  margin-bottom: 1.5rem;
+}
+
+.blog-detail__intro{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-detail__title {
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+}
+
+.blog-detail__desc {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.blog-detail__image-wrapper {
+  margin: 5rem 0;
+}
+
+.blog-detail__image {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.blog-detail__heading {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 4rem 0 1.5rem;
+}
+
+.blog-detail__text {
+  color: #414651;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.blog-detail__image-row {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.blog-detail__image{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+
+@media (max-width:992px) {
+  .blog-detail__title {
+    font-size: 3.5rem;
+  }
+
+  .blog-detail__heading {
+    margin: 2.5rem 0 1.5rem;
+  }
+
+  .blog-detail__image-wrapper {
+    margin: 3rem 0;
+  }
+}
+
+@media (max-width:768px) {
+  .blog-detail__title {
+    font-size: 2.5rem;
+  }
+
+  .blog-detail__image-row {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
