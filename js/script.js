@@ -97,3 +97,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+  const swiper = new Swiper('.case-study__gallery', {
+    slidesPerView: 1.5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2.5,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });

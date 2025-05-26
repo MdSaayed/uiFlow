@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UiFlow - Saas Html Template</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="./css/all.min.css">
     <!-- Custom Theme CSS -->
@@ -118,95 +125,140 @@
   </div>
   <!-- Mobile end navigation -->
 
-  <!-- Work Start Here -->
-  <section class="work">
-    <div class="work__container container">
-        <div class="work__title-wrapper">
-            <span class="work__subtitle subtitle">Our Work</span>
-            <h1 class="work__title-tabs">
-                <span class="work__title-tab work__title-tab--active">explore all <sup>12</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">fashion<sup>4</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">agency<sup>7</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">bcb<sup>3</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">b2c<sup>8</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">archive<sup>10</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">property<sup>2</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">health<sup>12</sup></span>
-                <span class="work__title-tab work__title-tab--inactive">corporate<sup>11</sup></span>
+  <!-- Hero Start Here -->
+  <section class="work-hero">
+    <div class="work-hero__container container">
+        <div class="work-hero__content hero__content" data-bg-img="./img/hero-2.png">
+            <h1 class="work-hero__title hero__title">
+                <span>Revamping TechCo's</span> 
+                <span>Online Experience</span>
             </h1>
-        </div>
-
-        <div class="work__grid">
-            <article class="work__item">
-                <img src="./img/work-1.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
-
-            <article class="work__item">
-                <img src="./img/work-2.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
-
-            <div class="work__cta">
-                <h3 class="work__cta-title">You're still here?!</h3>
-                <p class="work__cta-des">You must really like us...</p>
-                <div class="work__btn-wrapper btn-wrapper">
-                    <a href="#" class="btn btn--primary">
-                    <span>Contact Us</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 26 26" fill="none">
-                        <path d="M9.01828 18L8 16.9831L15.5718 9.40808L9.72324 9.40808L9.73629 8L18 8L18 16.266L16.577 16.266L16.5901 10.425L9.01828 18Z" fill="#010202"/>
-                    </svg>
-                    </a>
-                </div>
-            </div>
-
-            <article class="work__item">
-                <img src="./img/work-2.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
-
-            <article class="work__item">
-                <img src="./img/work-2.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
-            
-            <div class="work__highlight work__highlight--right">
-                <h2 class="work__highlight-title">
-                Shape understands the client's concept & turns ideas into a reality
-                </h2>
-            </div>
-
-            <article class="work__item">
-                <img src="./img/work-2.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
-
-            <article class="work__item">
-                <img src="./img/work-2.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
-
-            <article class="work__item">
-                <img src="./img/work-2.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
-
-            <article class="work__item">
-                <img src="./img/work-2.png" alt="TechCo Project" class="work__image" >
-                <p class="work__meta">2023 • Gray Matter</p>
-                <h3 class="work__name">Revamping TechCo's Online Experience</h3>
-            </article>
+            <ul class="work-hero__nav">
+                <li class="work-hero__nav-item"><a href="#" class="work-hero__nav-link">Branding</a></li>
+                <li class="work-hero__nav-item"><a href="#" class="work-hero__nav-link">Website</a></li>
+                <li class="work-hero__nav-item"><a href="#" class="work-hero__nav-link">SEO</a></li>
+            </ul>
         </div>
     </div>
   </section>
-  <!-- Work end Here -->
+  <!-- Hero End Here -->
+
+  <!-- Services Start Here -->
+  <section class="services">
+    <div class="services__container container">
+        <div class="services__content-area">
+            <div class="services__title-wrapper">
+                <span class="services__subtitle subtitle">Services</span>
+                <h2 class="services__title title">A new personal brand identity, bespoke site and build</h2>
+            </div>
+            <p class="services__desc">We were tasked to reimagine all aspects of the TechCo’s brand, from his personal brand identity through to carefully architectured site structure, design, and build. The website acts as an overview of all thingsTechCo’s from business to broadcasting, to charity and public speaking.</p>
+        </div>
+
+        <!-- Project Info Section -->
+        <div class="services__info">
+            <div class="services__info-item">
+                <span class="services__info-label">Client</span>
+                <h3 class="services__info-value">TechCo’s</h3>
+            </div>
+            <div class="services__info-item">
+                <span class="services__info-label">Industry</span>
+                <h3 class="services__info-value">Personal Branding</h3>
+            </div>
+            <div class="services__info-item">
+                <span class="services__info-label">Timeline</span>
+                <h3 class="services__info-value">12 Weeks</h3>
+            </div>
+        </div>
+
+        <div class="services__masonry">
+                <div class="services__col services__col--left">
+                <div class="services__img-wrap">
+                <img class="services__img" src="./img/services-1.png" alt="Services One">
+                </div>
+            </div>
+            <div class="services__col services__col--right">
+                <div class="services__img-wrap">
+                <img class="services__img" src="./img/services-2.png" alt="Services Two">
+                </div>
+                <div class="services__img-wrap">
+                <img class="services__img" src="./img/services-3.png" alt="Services Three">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Services End Here -->
+
+  <!-- Case-study Start Here -->
+  <section class="case-study">
+    <div class="case-study__container container">
+        <div class="case-study__content-area">
+            <div class="case-study__title-wrapper">
+                <p class="case-study__subtitle subtitle">Website</p>
+                <h2 class="case-study__title title">Exclusive yet progressive</h2>
+            </div>
+            <p class="case-study__desc">
+                We created an exclusive yet progressive platform, evoking a sense of sophistication with storytelling at its core. TechCo® is a very busy man, with involvement in many areas – the new brand and website had to encompass everything Gary is and does.
+            </p>
+        </div>
+
+        <div class="case-study__gallery swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide case-study__image">
+                <img src="./img/case-study-1.png" />
+                </div>
+                <div class="swiper-slide case-study__image">
+                <img src="./img/case-study-2.png" />
+                </div>
+                <div class="swiper-slide case-study__image">
+                <img src="./img/case-study-3.png" />
+                </div>
+                <div class="swiper-slide case-study__image">
+                <img src="./img/case-study-3.png" />
+                </div>
+                <div class="swiper-slide case-study__image">
+                <img src="./img/case-study-3.png" />
+                </div>
+                <div class="swiper-slide case-study__image">
+                <img src="./img/case-study-3.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Case-study End Here -->
+
+  <!-- Process Start Here -->
+  <section class="process">
+    <div class="process__container container">
+        <div class="case-study__content-area">
+            <div class="case-study__title-wrapper">
+                <p class="case-study__subtitle subtitle">Process</p>
+                <h2 class="case-study__title title">Carefully Curated Media</h2>
+            </div>
+            <p class="case-study__desc">
+                With media being of utmost importance, we paired these snippets of Gary's life with a classic yet contemporary typeface that aims to add a level of sophistication to the brand.
+            </p>
+        </div>
+
+        <div class="process__masonry">
+                <div class="process__col process__col--left">
+                    <div class="process__img-wrap">
+                        <img class="process__img" src="./img/process-2.png" alt="Process Two">
+                    </div>
+                    <div class="process__img-wrap">
+                        <img class="process__img" src="./img/process-3.png" alt="Process Three">
+                    </div>
+                </div>
+                <div class="process__col services__col--right">
+                    <div class="process__img-wrap">
+                    <img class="process__img" src="./img/process-1.png" alt="Process One">
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- Process End Here -->
 
   <!-- Marquee Text Start Here -->
   <section class="marquee">
@@ -301,7 +353,7 @@
     </div>
   </section>
   <!-- Blog End Here -->
-  
+
   <!-- Footer Start Here -->
   <footer class="footer">
     <div class="container footer__container">
