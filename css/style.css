@@ -1815,6 +1815,46 @@ body.menu-open::before {
 
 
 /* =============================
+* 00. Error Page
+============================= */
+
+.error {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.error__content {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically on smaller screens */
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.error__img{
+  width: 100%;
+}
+
+.error__title{
+  font-weight: 500;
+  font-size: 6rem;
+  color: var(--secondary);
+}
+
+.error__desc{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--secondary);
+  margin: 1.5rem 0;
+}
+
+.error__btn{
+  justify-content: center;
+}
+
+/* =============================
 * 11. Footer
 ============================= */
 .footer__container{
@@ -2090,6 +2130,12 @@ body.menu-open::before {
     gap: 3rem;
   }
 
+   /* Error */
+  .error__title{
+    font-size: 4rem;
+  }
+
+
   /* Footer */
   .footer__top{
     grid-template-columns: repeat(3,1fr);
@@ -2220,6 +2266,11 @@ body.menu-open::before {
     margin-bottom: 2rem;
   }
 
+   /* Error */
+  .error__title{
+    font-size: 3rem;
+  }
+
   /* footer */
   .footer__top{
     grid-template-columns: repeat(1,1fr);
@@ -2237,10 +2288,15 @@ body.menu-open::before {
 }
 
 
-@media (max-width:768px) {
+@media (max-width:45px) {
   /* Services Page */
   .services-page__services-title{
     font-size: 4.5rem;
     margin-bottom: 2rem;
+  }
+
+  /* Error */
+  .error__title{
+    font-size: 2rem;
   }
 }
