@@ -99,17 +99,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-  const swiper = new Swiper('.case-study__gallery', {
-    slidesPerView: 1.5,
-    spaceBetween: 30,
-    centeredSlides: true,
-    loop: true,
-    breakpoints: {
-      768: {
-        slidesPerView: 2.5,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  // Only run if Swiper is loaded AND element exists
+  if (typeof Swiper !== "undefined") {
+    const caseStudyEl = document.querySelector('.case-study__gallery');
+    
+    if (caseStudyEl) {
+      const caseStudy = new Swiper('.case-study__gallery', {
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        breakpoints: {
+          768: {
+            slidesPerView: 2.5,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    }
+  } else {
+    console.warn("Swiper is not defined. Skipping .case-study__gallery initialization.");
+  }
+});
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const faqItems = document.querySelectorAll(".faq__item");
+      
+      // Initialize first item as open
+      const firstItem = faqItems[0];
+      const firstAnswer = firstItem.querySelector(".faq__answer");
+      firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector(".faq__question");
+        const answer = item.querySelector(".faq__answer");
+        
+        question.addEventListener("click", () => {
+          // Check if this item is already active
+          const isActive = item.classList.contains("faq__item--active");
+          
+          // Close all items
+          faqItems.forEach(el => {
+            el.classList.remove("faq__item--active");
+            const otherAnswer = el.querySelector(".faq__answer");
+            otherAnswer.style.maxHeight = "0";
+          });
+          
+          // Toggle current item if it wasn't active
+          if (!isActive) {
+            item.classList.add("faq__item--active");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+
+          }
+        });
+      });
+      
+      // Handle window resize to adjust open item height
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const activeItem = document.querySelector(".faq__item--active");
+          if (activeItem) {
+            const activeAnswer = activeItem.querySelector(".faq__answer");
+            activeAnswer.style.maxHeight = activeAnswer.scrollHeight + "px";
+          }
+        }, 250);
+      });
+    });

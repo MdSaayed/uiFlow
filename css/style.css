@@ -23,6 +23,10 @@ CSS INDEX
 11. Services
 12. Blog Details
 13. Contact Us
+14. Work Area
+15. Case-study
+16. Studio
+17. Faq
 14. Responsive
 
 ------------------------------------------------------------------*/
@@ -1241,7 +1245,7 @@ body.menu-open::before {
 }
 
 /* =============================
-* 11. Work Area
+* 14. Work Area
 ============================= */
 .work__title-tabs {
   display: flex;
@@ -1452,7 +1456,7 @@ body.menu-open::before {
 
 
 /* =============================
-* 11. Case-study
+* 15. Case-study
 ============================= */
 .case-study{
   overflow: hidden;
@@ -1507,9 +1511,204 @@ body.menu-open::before {
   object-fit: cover;
 }
 
+/* =============================
+* 16. Studio
+============================= */
+
+/* Wrapper */
+.studio__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.studio__desc {
+  font-size: 18px;
+  color: var(--secondary);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+}
+
+/* Address and Socials */
+.studio__details {
+  display: flex;
+  gap: 40px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.studio__label {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #999A9A;
+}
+
+.studio__location {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.studio__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  font-style: normal;
+  color: var(--secondary);
+}
+
+/* Social Icons */
+.studio__icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.studio__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #d9ff5b;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.studio__social--facebook {
+  background-color: #d9ff5b;
+}
+
+.studio__social--linkedin {
+  background-color: #d9ff5b;
+}
+
+.studio__social--x {
+  background-color: #d9ff5b;
+}
+
+.studio__button svg{
+  background-color: var(--secondary);
+}
+ 
+.studio__button-text{
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+/* Image */
+.studio__image-wrapper {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.studio__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
 
 
+/* =============================
+* 17. Faq
+============================= */
+.faq {
+      border-radius: 20px;
+      padding: 60px 40px;
+      margin-top: 30px;
+    }
 
+    .faq__container {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .faq__content {
+      flex: 1 1 300px;
+    }
+
+    .faq__items {
+      flex: 2 1 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq__chat-btn{
+      margin-top: 2rem;
+    }
+
+    .faq__item {
+      padding: 1.5rem;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background-color: #F3F3F3;
+    }
+
+    .faq__item:hover {
+      transform: translateY(-3px);
+    }
+
+    .faq__question {
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      color: var(--secondary);
+      transition: background 0.3s ease;
+    }
+
+    .faq__question svg {
+      font-size: 16px;
+      transition: transform 0.4s ease;
+      width: 30px;
+      height: 30px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .faq__answer {
+      overflow: hidden;
+      color: #555;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-height: 0;
+      transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .faq__item--active svg {
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 768px) {
+      .faq__container {
+        flex-direction: column;
+      }
+    }
 
 /* =============================
 * 11. Footer
@@ -1766,6 +1965,14 @@ body.menu-open::before {
   /* Work Single */
   .work-hero__content{
     padding-left: 0;
+  }
+
+  /* Studio Are */
+  .studio__wrapper {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .studio__wrapper{
+    padding: 1.5rem;
   }
 
 
