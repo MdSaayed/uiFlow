@@ -27,6 +27,7 @@ CSS INDEX
 15. Case-study
 16. Studio
 17. Faq
+18. services Page
 14. Responsive
 
 ------------------------------------------------------------------*/
@@ -55,6 +56,7 @@ body{
     font-family: "Inter", sans-serif;
     font-size: 16px;
     color: var(--secondary);
+    box-sizing: border-box;
 }
 
 li{
@@ -1627,21 +1629,15 @@ body.menu-open::before {
 /* =============================
 * 17. Faq
 ============================= */
-.faq {
-      border-radius: 20px;
-      padding: 60px 40px;
-      margin-top: 30px;
-    }
-
-    .faq__container {
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
 
     .faq__content {
-      flex: 1 1 300px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5rem;
+    }
+
+    .faq__heading{
+      max-width: 400px;
     }
 
     .faq__items {
@@ -1673,19 +1669,23 @@ body.menu-open::before {
       position: relative;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: start;
+      gap: 1rem;
       font-size: 1.2rem;
       color: var(--secondary);
       transition: background 0.3s ease;
     }
 
-    .faq__question svg {
-      font-size: 16px;
+    .faq__question svg{
       transition: transform 0.4s ease;
-      width: 30px;
-      height: 30px;
       background: var(--secondary);
       border-radius: 50%;
+      transform: rotate(225deg);
+    }
+
+    .faq__icon-wrap {
+      width: 30px;
+      height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1697,18 +1697,122 @@ body.menu-open::before {
       font-size: 1.05rem;
       line-height: 1.7;
       max-height: 0;
+      max-width: 700px;
       transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .faq__item--active svg {
-      transform: rotate(180deg);
+      transform: rotate(360deg);
     }
 
-    @media (max-width: 768px) {
-      .faq__container {
-        flex-direction: column;
-      }
-    }
+
+/* =============================
+* 18. services Page
+============================= */
+.services-page__container:not(:last-child) {
+  border-bottom: 1px solid #DADADA;
+}
+
+.services-page__intro{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.services-page__services-title{
+  font-size: 18rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.services-page__intro-text{
+  display: flex;
+  justify-content: end;
+}
+
+.services-page__desc,.services-page__text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  max-width: 540px;
+}
+
+.services-page__grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 5rem;
+}
+
+.services-page__text{
+  margin-top: 2rem;
+  max-width: 450px;
+}
+
+.services-page {
+  list-style: none;
+  margin: 0;
+}
+
+.services__service-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #DADADA;
+  font-size: 18px;
+  color: var(--secondary);
+  position: relative;
+  transition: border-color 0.4s ease, color 0.4s ease;
+}
+
+.services__service-item:hover {
+  border-bottom: 1px solid var(--secondary);
+}
+
+.services__service-item svg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.services__service-item svg {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.services__service-item:hover svg {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.services__service-item span {
+  color: #999A9A;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+
 
 /* =============================
 * 11. Footer
@@ -1975,6 +2079,16 @@ body.menu-open::before {
     padding: 1.5rem;
   }
 
+  /* Services Page */
+  .services-page__services-title{
+    font-size: 12rem;
+    margin-bottom: 3rem;
+  }
+
+  .services-page__grid{
+    grid-template-columns: repeat(1,1fr);
+    gap: 3rem;
+  }
 
   /* Footer */
   .footer__top{
@@ -2072,6 +2186,8 @@ body.menu-open::before {
   .contact__icon {
     position: static;
     margin-top: 1rem;
+    width: 36px;
+    height: 36px;
   }
 
   /* Work Single */
@@ -2086,6 +2202,22 @@ body.menu-open::before {
 
   .services__col--right,.process__col--left {
     flex-direction: column;
+  }
+
+  /* Studio */
+  .studio__wrapper {
+    padding: 1rem;
+  }
+
+  /* Faq */
+  .faq__container {
+    flex-direction: column;
+  }
+
+  /* Services Page */
+  .services-page__services-title{
+    font-size: 7rem;
+    margin-bottom: 2rem;
   }
 
   /* footer */
@@ -2104,3 +2236,11 @@ body.menu-open::before {
   }
 }
 
+
+@media (max-width:768px) {
+  /* Services Page */
+  .services-page__services-title{
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+  }
+}
