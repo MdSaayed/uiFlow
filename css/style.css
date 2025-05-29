@@ -27,7 +27,9 @@ CSS INDEX
 15. Case-study
 16. Studio
 17. Faq
-18. services Page
+18. Services Page
+19. Service Single
+20. Service Highlight
 14. Responsive
 
 ------------------------------------------------------------------*/
@@ -114,6 +116,7 @@ a{
 
 .btn--primary span, .btn--secondary span{
   padding: 10px 16px;
+  display: block;
   border-radius: 32px;
   text-align: center;
   text-decoration: none;
@@ -1630,85 +1633,85 @@ body.menu-open::before {
 * 17. Faq
 ============================= */
 
-    .faq__content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5rem;
-    }
+.faq__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
 
-    .faq__heading{
-      max-width: 400px;
-    }
+.faq__heading{
+  max-width: 400px;
+}
 
-    .faq__items {
-      flex: 2 1 600px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+.faq__items {
+  flex: 2 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-    .faq__chat-btn{
-      margin-top: 2rem;
-    }
+.faq__chat-btn{
+  margin-top: 2rem;
+}
 
-    .faq__item {
-      padding: 1.5rem;
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      background-color: #F3F3F3;
-    }
+.faq__item {
+  padding: 1.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #F3F3F3;
+}
 
-    .faq__item:hover {
-      transform: translateY(-3px);
-    }
+.faq__item:hover {
+  transform: translateY(-3px);
+}
 
-    .faq__question {
-      font-weight: 600;
-      cursor: pointer;
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      gap: 1rem;
-      font-size: 1.2rem;
-      color: var(--secondary);
-      transition: background 0.3s ease;
-    }
+.faq__question {
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: var(--secondary);
+  transition: background 0.3s ease;
+}
 
-    .faq__question svg{
-      transition: transform 0.4s ease;
-      background: var(--secondary);
-      border-radius: 50%;
-      transform: rotate(225deg);
-    }
+.faq__question svg{
+  transition: transform 0.4s ease;
+  background: var(--secondary);
+  border-radius: 50%;
+  transform: rotate(225deg);
+}
 
-    .faq__icon-wrap {
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.faq__icon-wrap {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .faq__answer {
-      overflow: hidden;
-      color: #555;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      max-height: 0;
-      max-width: 700px;
-      transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+.faq__answer {
+  overflow: hidden;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-height: 0;
+  max-width: 700px;
+  transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    .faq__item--active svg {
-      transform: rotate(360deg);
-    }
-
+.faq__item--active svg {
+  transform: rotate(360deg);
+}
 
 /* =============================
-* 18. services Page
+* 18. Services Page
 ============================= */
+
 .services-page__container:not(:last-child) {
   border-bottom: 1px solid #DADADA;
 }
@@ -1813,10 +1816,86 @@ body.menu-open::before {
 }
 
 
+/* =============================
+* 19. Service Single
+============================= */
+
+.service-single__intro-text{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.service-single__title-wrap{
+  max-width: 780px;
+}
+
+.service-single__desc{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--secondary);
+}
+
+.service-single__image{
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
+  border-radius: 16px;
+}
+
+
+/* =============================
+* 20. Service Highlight
+============================= */
+
+.service-highlight__container {
+  padding-top: 0;
+}
+
+.service-highlight__title{
+  margin-bottom: 1.5rem;
+}
+
+.service-highlight__image{
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
+  border-radius: 16px;
+}
+
+.service-highlight__note-text{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #414651;
+  margin-top: 5rem;
+}
+
+.service-highlight__text-wrap{
+  margin-top: 5rem;
+}
+
+.service-highlight__text-title{
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.service-highlight__text-desc{
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #414651;
+}
 
 /* =============================
 * 00. Error Page
 ============================= */
+
 
 .error {
   display: grid;
@@ -1826,7 +1905,7 @@ body.menu-open::before {
 
 .error__content {
   display: flex;
-  flex-direction: column; /* Stack image and text vertically on smaller screens */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 2rem;
@@ -2130,11 +2209,23 @@ body.menu-open::before {
     gap: 3rem;
   }
 
+  /* Services Highlight */
+  .service-highlight__image,.service-highlight__note-text  {
+    margin-top: 2.5rem;
+  }
+
+  .service-highlight__text-title{
+    font-size: 1.5rem;
+  }
+
+  .service-highlight__text-wrap{
+    margin-top: 3rem;
+  }
+
    /* Error */
   .error__title{
     font-size: 4rem;
   }
-
 
   /* Footer */
   .footer__top{
@@ -2288,7 +2379,7 @@ body.menu-open::before {
 }
 
 
-@media (max-width:45px) {
+@media (max-width:450px) {
   /* Services Page */
   .services-page__services-title{
     font-size: 4.5rem;
