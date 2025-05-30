@@ -30,6 +30,7 @@ CSS INDEX
 18. Services Page
 19. Service Single
 20. Service Highlight
+21. Blog Grid
 14. Responsive
 
 ------------------------------------------------------------------*/
@@ -984,7 +985,7 @@ body.menu-open::before {
 }
 
 .blog__thumb img:hover{
-  transform: rotate(6deg);
+  transform: rotate(3deg);
   scale: 1.2;
 }
 
@@ -1850,6 +1851,10 @@ body.menu-open::before {
 * 20. Service Highlight
 ============================= */
 
+.service-highlight{
+  border-bottom:1px solid #DADADA ;
+}
+
 .service-highlight__container {
   padding-top: 0;
 }
@@ -1893,9 +1898,312 @@ body.menu-open::before {
 }
 
 /* =============================
-* 00. Error Page
+* 21. Blog Grid
 ============================= */
 
+.blog--page .blog__title-tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  margin-top: -1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.blog--page .blog__title-tab {
+  color: #999A9A;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blog--page .blog__title-tab--active {
+  color: var(--secondary);
+}
+
+.blog--page .blog__title-tab sup{
+  font-size: 1rem;
+}
+
+.blog--page .blog__grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+
+.blog--page .blog__card{
+  width: 100%;
+  overflow: hidden;
+}
+
+.blog--page  .blog__card-image{
+  overflow: hidden;
+  max-height: 290px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.blog--page .blog__thumb{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: 0.5s ease;
+}
+
+.blog--page .blog__thumb:hover{
+  transform: rotate(3deg);
+  scale: 1.2;
+}
+
+.blog--page .blog__card-meta{
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-colors);
+  margin-top: 1.5rem;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.blog--page .blog__card-meta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+
+.blog--page .blog__card-title{
+  color: var(--secondary);
+  font-size: 1.6rem;
+  line-height: normal;
+  font-weight: 500;
+}
+
+/* =============================
+* 22. About Blog Page
+============================= */
+
+.about--blog .about__content{
+  background-color: var(--primary);
+  padding: 5rem;
+  border-radius: 20px;
+}
+
+.about--blog .about__form-wrap{
+  margin-top: 2rem;
+}
+
+.about--blog .about__form{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.about--blog .about__form input{
+  border: none;
+  padding:15px ;
+  background-color: var(--white);
+  border-radius: 12px;
+  width: 80%;
+}
+
+.about--blog .about__form input:focus{
+  border: 1px solid rgb(43, 42, 42);
+}
+
+.about--blog .about__form input::placeholder{
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.about--blog .about__form-wrap .btn svg{
+  background-color: var(--secondary);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 10px
+}
+.about--blog .about__form-wrap .btn{
+  background: none;
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+.about--blog .about__form-wrap .btn:hover{
+  transform: rotate(45deg);
+}
+
+/* =============================
+* 23. Testimonials
+============================= */
+
+.testimonial{
+  background: #F0EEE9;
+}
+
+.testimonial__container{
+  padding-right: 0;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.testimonial__slider{
+  margin-top: 5rem;
+}
+
+.testimonial__slide{
+  background-color: var(--white);
+}
+
+.testimonial__quote-wrap{
+  padding:2rem 2rem 0 2rem;
+}
+
+.testimonial__author{
+  padding:0 2rem 2rem 2rem;
+}
+
+.testimonial__content{
+  padding: 0 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.testimonial__author-image{
+  width: 56px;
+  height: 40px;
+}
+
+.testimonial__author-image img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.testimonial__author{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.testimonial__author-name{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.testimonial__author-position{
+  color: #414651;
+   font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+
+/* =============================
+* 24. Team
+============================= */
+.team__grid{
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2.5rem;
+}
+
+.team__member-img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.team__member-info{
+  margin-top: 1rem;
+}
+
+.team__member-name{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-color);
+}
+
+.team__member-title{
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.team__member-socials{
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 14px;
+}
+
+
+/* =============================
+* 25. Our Mission
+============================= */
+
+.mission__title{
+  max-width: 100%;
+}
+
+.mission__title-gray{
+  color: #717680;
+}
+
+.mission__img-grid{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.mission__img-wrap:first-child {
+  grid-column: 1 / 3;  
+}
+
+.mission__img-wrap:last-child {
+  grid-column: 3 / 6;  
+  margin-right: -5rem;
+}
+
+.mission__img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+/* =============================
+* 00. Error Page
+============================= */
 
 .error {
   display: grid;
@@ -1936,6 +2244,7 @@ body.menu-open::before {
 /* =============================
 * 11. Footer
 ============================= */
+
 .footer__container{
   position: relative;
   background-color: var(--secondary);
@@ -2178,9 +2487,11 @@ body.menu-open::before {
     column-count: 1;
     row-gap: 3rem;
   }
+
   .work__cta {
     padding: 2rem;
   }
+
   .work__highlight-title {
     padding: 0 2rem;
   }
@@ -2194,6 +2505,7 @@ body.menu-open::before {
   .studio__wrapper {
     grid-template-columns: repeat(1,1fr);
   }
+
   .studio__wrapper{
     padding: 1.5rem;
   }
@@ -2220,6 +2532,16 @@ body.menu-open::before {
 
   .service-highlight__text-wrap{
     margin-top: 3rem;
+  }
+
+  /* Testimonials */
+  .testimonial__slider{
+    margin-top: 3rem;
+  }
+
+  /* Team */
+  .team__grid{
+    grid-template-columns: repeat(2,1fr);
   }
 
    /* Error */
@@ -2355,6 +2677,25 @@ body.menu-open::before {
   .services-page__services-title{
     font-size: 7rem;
     margin-bottom: 2rem;
+  }
+
+  /* Team */
+  .team__grid{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  /* Mission */
+  .mission__img-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission__img-wrap:first-child,
+  .mission__img-wrap:last-child {
+    grid-column: auto;
+  }
+
+  .mission__img-wrap:last-child {
+    margin-right: 0;
   }
 
    /* Error */

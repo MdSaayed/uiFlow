@@ -171,3 +171,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 250);
   });
 });
+
+
+var testimonialSlider = new Swiper(".testimonial__slider", {
+  watchSlidesProgress: true,
+  spaceBetween: 20,
+  slidesPerView: 3.2,
+  allowTouchMove: true,
+  keyboard: {
+    enabled: true,
+  },
+  loop:true,
+  freeMode: true,
+    breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    470: {
+      slidesPerView: 1.2,
+    },
+    768: {
+      slidesPerView: 2.2,
+    },
+    1024: {
+      slidesPerView: 3.2,
+    },
+  }
+});
