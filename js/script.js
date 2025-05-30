@@ -81,7 +81,6 @@ if (menuToggle) {
     });
 }
 
-
 // Dynamically set background images
 document.addEventListener('DOMContentLoaded', function () {
     const bgDivs = document.querySelectorAll('[data-bg-img]');
@@ -98,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
+// Case Study Slider
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof Swiper !== "undefined") {
     const caseStudyEl = document.querySelector('.case-study__gallery');
@@ -124,8 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
+// Faq
 document.addEventListener("DOMContentLoaded", function() {
   const faqItems = document.querySelectorAll(".faq__item");
   
@@ -172,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
+// Testimonials
 var testimonialSlider = new Swiper(".testimonial__slider", {
   watchSlidesProgress: true,
   spaceBetween: 20,
